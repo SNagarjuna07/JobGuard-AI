@@ -42,10 +42,33 @@ df["clean_text"] = df["text"].apply(clean_text)
 # ============================================================
 
 scam_keywords = [
-    "telegram", "whatsapp", "earn", "weekly", "income",
-    "investment", "bitcoin", "crypto", "limited seats",
-    "work from home", "urgent", "immediate", "per week"
+    "work from home opportunity",
+    "quick money",
+    "no experience necessary",
+    "minimal work for high pay",
+    "immediate hire",
+    "urgent hiring",
+    "upfront fee required",
+    "pay for training",
+    "pay for equipment",
+    "pay for application",
+    "unsolicited job offer",
+    "generic domain email",
+    "vague job description",
+    "no details about duties",
+    "no details about qualifications",
+    "flexible schedule",
+    "unlimited earning potential",
+    "send personal information",
+    "grammatical errors",
+    "spelling errors",
+    "short interview process",
+    "no live interaction",
+    "investment required",
+    "send funds",
+    "company info missing"
 ]
+
 
 def add_scam_weight(text):
     for w in scam_keywords:
