@@ -44,7 +44,7 @@ df["clean_text"] = df["text"].apply(clean_text)
 scam_keywords = [
     "telegram", "whatsapp", "earn", "weekly", "income",
     "investment", "bitcoin", "crypto", "limited seats",
-    "work from home", "urgent", "immediate", "50000", "100000"
+    "work from home", "urgent", "immediate", "per week"
 ]
 
 def add_scam_weight(text):
