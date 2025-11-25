@@ -1,3 +1,7 @@
+/* Import Google Font (Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Root Variables (Colors, Gradients & Global Theme) */
 :root {
     --bg-gradient: linear-gradient(105deg, #e04317 0%, #bbe31e 100%);
     --glass-border: rgba(55, 65, 81, 0.5);
@@ -12,10 +16,12 @@
     --input-bg: rgba(31, 41, 55, 0.8);
 }
 
+/* Reset spacing & enable border-box everywhere */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Body Layout & Background */
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
     background-size: cover;
     background-position: center;
@@ -28,17 +34,22 @@ body {
     padding: 20px;
 }
 
+/* Container width for the app */
+.app-container { 
+    width: 100%; 
+    max-width: 600px; 
+}
 
-.app-container { width: 100%; max-width: 600px; }
-
+/* Card UI */
 .card {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(20px);
     border-radius: 16px;
     border: 1px solid var(--glass-border);
     padding: 40px;
 }
 
+/* Header Section */
 .header {
     margin-bottom: 32px;
     padding-bottom: 20px;
@@ -48,44 +59,71 @@ body {
     justify-content: space-between;
 }
 
-.brand { display: flex; align-items: center; gap: 12px; }
-.icon-shield { width: 28px; height: 28px; color: var(--primary); }
+.brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
 
-.header h1 { font-size: 24px; font-weight: 600; }
-.header .subtitle { font-size: 14px; color: var(--text-muted); }
+/* Icon Styling */
+.icon-shield { 
+    width: 60px; 
+    height: 60px; 
+    color: var(--primary); 
+}
 
-.form-group { margin-bottom: 24px; }
+.header h1 { 
+    font-size: 30px; 
+    font-weight: 600; 
+}
+
+.header .subtitle { 
+    font-size: 18px; 
+    color: var(--text-muted); 
+}
+
+/* Form Styles */
+.form-group { 
+    margin-bottom: 24px; 
+}
 
 label {
     display: block;
     color: var(--text-accent);
-    font-size: 13px;
+    font-size: 18px;
     margin-bottom: 8px;
     font-weight: 500;
 }
 
+/* Input + Textarea */
 input, textarea {
     width: 100%;
     padding: 12px 16px;
     border-radius: 8px;
     background: var(--input-bg);
-    border: 1px solid var(--border);
+    border: 1px solid rgb(151, 151, 147);
     color: var(--text-main);
-    font-size: 14px;
+    font-size: 18px;
 }
 
-textarea { resize: vertical; min-height: 80px; }
+textarea { 
+    resize: vertical; 
+    min-height: 80px; 
+}
 
+/* Active/Focus State */
 input:focus, textarea:focus {
     border-color: var(--primary);
     outline: none;
     box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
+/* Primary Button */
 .btn-analyze {
-    width: 50%;
-    margin: 0 auto;
+    width: 50%;                      /* Make button smaller */
+    margin: 0 auto;                   /* Center horizontally */
     padding: 14px;
+    font-size: 16px;
     background: var(--primary);
     border-radius: 8px;
     color: white;
@@ -96,9 +134,11 @@ input:focus, textarea:focus {
     gap: 8px;
 }
 
-.btn-analyze:hover { background: #2563eb; }
+.btn-analyze:hover { 
+    background: #2563eb; 
+}
 
-/* LOADER */
+/* Loader Animation */
 .loader {
     display: none;
     width: 24px;
@@ -110,9 +150,11 @@ input:focus, textarea:focus {
     animation: spin .8s linear infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin { 
+    to { transform: rotate(360deg); } 
+}
 
-/* RESULT BOX */
+/* Result Card (Fake/Real Output Box) */
 .status-card {
     padding: 20px;
     border-radius: 8px;
@@ -121,10 +163,16 @@ input:focus, textarea:focus {
     border: 1px solid var(--border);
 }
 
-.status-fake { border-left: 4px solid var(--danger); }
-.status-real { border-left: 4px solid var(--success); }
+/* Left color indicators */
+.status-fake { 
+    border-left: 4px solid var(--danger); 
+}
 
-/* PROBABILITY BAR */
+.status-real { 
+    border-left: 4px solid var(--success); 
+}
+
+/* Probability Bar Section*/
 .prob-box {
     margin-top: 15px;
     font-size: 14px;
@@ -137,11 +185,23 @@ input:focus, textarea:focus {
     transition: width 0.4s ease;
 }
 
-.prob-bar.fake { background: var(--danger); }
-.prob-bar.real { background: var(--success); }
+/* Color-coded bars */
+.prob-bar.fake { 
+    background: var(--danger); 
+}
 
+.prob-bar.real { 
+    background: var(--success); 
+}
+
+/* Footer */
 .footer {
     text-align: center;
     margin-top: 24px;
-    color: #000;
+    color: #fff;
+}
+
+/* Placeholder text styling */
+::placeholder {
+    font-size: 16px;
 }

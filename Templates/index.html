@@ -1,77 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobGuard AI | Professional Verifier</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Main container for centering the application card -->
     <div class="app-container">
+
+        <!-- Card containing the full UI -->
         <div class="card">
-            
-            <!-- Header -->
+
+            <!-- Application Header (Logo + Title) -->
             <div class="header">
                 <div class="brand">
+
+                    <!-- Shield Icon -->
                     <svg class="icon-shield" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 
-                            0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 
-                            9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 
+                            0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 
+                            0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 
+                            9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
                         </path>
                     </svg>
+
                     <div>
                         <h1>JobGuard AI</h1>
                         <p class="subtitle">Professional Job Posting Verifier</p>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Form -->
+            <!-- Job Input Form -- Handles: Job Title, Company Profile, Description, Requirements -->
             <form id="jobForm" action="javascript:void(0);">
+
+                <!-- Job Title -->
                 <div class="form-group">
                     <label for="title">Job Title</label>
                     <input id="title" type="text" placeholder="e.g. Senior Data Analyst">
                 </div>
 
+                <!-- Company Profile -->
                 <div class="form-group">
                     <label for="company_profile">Company Profile</label>
-                    <textarea id="company_profile" rows="3" placeholder="Brief description about the company..."></textarea>
+                    <textarea id="company_profile" rows="3"
+                        placeholder="Brief description about the company..."></textarea>
                 </div>
 
+                <!-- Job Description -->
                 <div class="form-group">
                     <label for="description">Job Description</label>
-                    <textarea id="description" rows="4" placeholder="Paste the full job description here..."></textarea>
+                    <textarea id="description" rows="4"
+                        placeholder="Paste the full job description here..."></textarea>
                 </div>
 
+                <!-- Job Requirements -->
                 <div class="form-group">
                     <label for="requirements">Requirements</label>
-                    <textarea id="requirements" rows="3" placeholder="List skills, education, and experience..."></textarea>
+                    <textarea id="requirements" rows="3"
+                        placeholder="List skills, education, and experience..."></textarea>
                 </div>
 
+                <!-- Submit Button -->
                 <button type="submit" class="btn-analyze" id="btnSubmit">
                     <span>Analyze Job Posting</span>
                 </button>
             </form>
 
-            <!-- Loader -->
+            <!-- Loader Animation -->
             <div class="loader" id="loader"></div>
 
-            <!-- Result Area -->
+            <!-- Result Area for ML Output -->
             <div id="result-area"></div>
 
         </div>
 
+        <!-- Footer Section -->
         <div class="footer">
-            <p>&copy; 2025 JobGuard Security. AI results are probabilistic estimates. Always verify independently.</p>
+            <p>&copy; 2025 JobGuard Security. Results are AI-generated predictions and may not be fully accurate. Please verify with official sources. </p>
         </div>
+
     </div>
 
     <!-- JavaScript -->
