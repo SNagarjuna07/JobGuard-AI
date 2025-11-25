@@ -13,7 +13,7 @@ import pickle
 # 1. LOAD DATA
 # ============================================================
 
-df = pd.read_csv("D:\\Coding\\Datasets\\Fake jobs\\fake_job_postings.csv")
+df = pd.read_csv("fake_job_postings.csv")
 
 
 df.fillna("", inplace=True)
@@ -142,5 +142,3 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 
 pickle.dump(model, open("improved_fake_job_model.pkl", "wb"))
 pickle.dump(vectorizer, open("improved_vectorizer.pkl", "wb"))
-
-print("\nSaved improved model + vectorizer successfully.")

@@ -16,7 +16,10 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background: var(--bg-gradient);
+    background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
@@ -25,10 +28,11 @@ body {
     padding: 20px;
 }
 
+
 .app-container { width: 100%; max-width: 600px; }
 
 .card {
-    background: black;
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
     border-radius: 16px;
     border: 1px solid var(--glass-border);
